@@ -2,16 +2,32 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const skills= [
-    {name: "HTML/CSS", level: 95, category: "frontend"},
-    {name: "JavaScript", level: 90, category: "frontend"},
-    {name: "React", level: 85, category: "frontend"},
-    {name: "Next.js", level: 80, category: "frontend"},
-    {name: "Tailwind CSS", level: 75, category: "frontend"},
-    {name: "Typescript", level: 80, category: "frontend"},
-    {name: "Node.js", level: 80, category: "backend"},
-    {name: "Git/Github", level: 80, category: "tools"},
-    {name: "VS Code", level: 80, category: "tools"},
+    {name: "HTML/CSS", level: 100, category: "frontend"},
+    {name: "JavaScript", level: 100, category: "frontend"},
+    {name: "React", level: 100, category: "frontend"},
+    {name: "Next.js", level: 100, category: "frontend"},
+    {name: "Tailwind CSS", level: 100, category: "frontend"},
+    {name: "Typescript", level: 100, category: "frontend"},
+    {name: "Node.js", level: 100, category: "backend"},
+    {name: "Git/Github", level: 100, category: "tools"},
+    {name: "VS Code", level: 100, category: "tools"},
+    {name: "Java", level: 100, category: "backend"},
+    {name: "Python", level: 100, category: "backend"}
 ];
+
+const StarRating = ({ level }) => {
+  const stars = Math.round(level / 20); // convert % to 1–5
+  return (
+    <div className="flex gap-1">
+      {[...Array(5)].map((_, i) => (
+        <span key={i} className={i < stars ? "text-yellow-400" : "text-gray-400"}>
+          ★
+        </span>
+      ))}
+    </div>
+  );
+};
+
 
 const categories = ["all", "frontend", "backend", "tools"];
 
@@ -54,8 +70,8 @@ export const SkillsSection = () => {
                         <div className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out" 
                         style={{width: skill.level + "%"}}/>
                     </div>
-                    <div className="text-right mt-1">
-                        <span className="text-sm text-muted-foreground">{skill.level}%</span>
+                    <div className="text-left p-3 rounded-lg shadow-xs">
+                        <StarRating level={skill.level} />
                     </div>
                 </div>
             ))}
