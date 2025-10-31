@@ -15,6 +15,30 @@ export const ContactSection = () => {
             toast({title: "Message Sent!", description: "Thank you for the message. I'll get back to you!"})
         }, 1500)
     }
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+
+        formData.append("access_key", "069a0f05-eaa5-4ffa-831f-28416105d52f");
+
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+        },
+        body: json
+        }).then((res) => res.json());
+
+        if (res.success) {
+        console.log("Success", res);
+        }
+    };
+
     return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
         <div className="container mx-auto max-w-5xl">
@@ -87,9 +111,9 @@ export const ContactSection = () => {
                         Send a Message
                     </h3>
 
-                    <form className="space-y-6">
+                    <form className="space-y-6" onSubmit={onSubmit}>
                         <div>
-                            <label htmlFor="name" className="block text-sm font-medium mb-2"> Your Name</label>
+                            <label htmlFor="name" className="block text-sm font-medium mb-2"> Your Name </label>
                             <input type="text" id="name" name="name" required className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary" placeholder="Steve Yang..."></input>
                         </div>
 

@@ -2,17 +2,17 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const skills= [
-    {name: "HTML/CSS", level: 100, category: "frontend"},
-    {name: "JavaScript", level: 100, category: "frontend"},
-    {name: "React", level: 100, category: "frontend"},
-    {name: "Next.js", level: 100, category: "frontend"},
-    {name: "Tailwind CSS", level: 100, category: "frontend"},
-    {name: "Typescript", level: 100, category: "frontend"},
-    {name: "Node.js", level: 100, category: "backend"},
-    {name: "Git/Github", level: 100, category: "tools"},
+    {name: "HTML/CSS", level: 55, category: "frontend"},
+    {name: "JavaScript", level: 50, category: "frontend"},
+    {name: "React", level: 60, category: "frontend"},
+    {name: "Next.js", level: 30, category: "frontend"},
+    {name: "Tailwind CSS", level: 70, category: "frontend"},
+    {name: "Typescript", level: 40, category: "frontend"},
+    {name: "Node.js", level: 40, category: "backend"},
+    {name: "Git/Github", level: 70, category: "tools"},
     {name: "VS Code", level: 100, category: "tools"},
-    {name: "Java", level: 100, category: "backend"},
-    {name: "Python", level: 100, category: "backend"}
+    {name: "Java", level: 80, category: "backend"},
+    {name: "Python", level: 90, category: "backend"}
 ];
 
 const StarRating = ({ level }) => {
@@ -63,17 +63,18 @@ export const SkillsSection = () => {
                 {filteredSkills.map((skill, key) => (
 
                 <div key={key} className="bg-card p-6 rounded-lg shadow-xs card-hover">
-                    <div className="text-left mb-4">
+                    {/* Name + Stars on the same row */}
+                    <div className="flex items-center gap-2 mb-3">
                         <h3 className="font-semibold text-lg">{skill.name}</h3>
-                    </div>
-                    <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                        <div className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out" 
-                        style={{width: skill.level + "%"}}/>
-                    </div>
-                    <div className="text-left p-3 rounded-lg shadow-xs">
                         <StarRating level={skill.level} />
                     </div>
-                </div>
+
+                    {/* Progress Bar */}
+                    <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
+                        <div className="bg-primary h-2 rounded-full w-full" />
+                    </div>
+                    </div>
+
             ))}
             </div>
         </div>

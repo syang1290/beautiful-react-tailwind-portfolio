@@ -16,16 +16,17 @@ export const AboutSection = () => {
                             Passionate Web Developer
                         </h3>
                         <p className="text-muted-foreground">
-                            With over a single year of experience in the field of computer science, Steve is passionate about learning more in the field of machine learning and software engineering
+                            With over a single year of experience in the field of computer science, I'm passionate about learning more in the field of machine learning and software engineering
                         </p>
                         <p className="text-muted-foreground">
-                            With over a single year of experience in the field of computer science, Steve is passionate about learning more in the field of machine learning and software engineering
+                            With over a single year of experience in the field of computer science, I'm passionate about learning more in the field of machine learning and software engineering
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                             <a href="#contact" className="cosmic-button">
                                 Get In Touch
                             </a>
-                            <a href="" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">
+                            <a href="https://drive.google.com/file/d/1bpUTSHrTBqbO0Hkv20H0HGHGzs1_rv56/view?usp=sharing
+" target="_blank" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">
                                 Download Resume
                             </a>
                         </div>
