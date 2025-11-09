@@ -13,13 +13,13 @@ export const AboutSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
                         <h3 className="text-2xl font-semibold">
-                            Passionate Web Developer
+                            Passionate Developer
                         </h3>
                         <p className="text-muted-foreground">
-                            With over a single year of experience in the field of computer science, I'm passionate about learning more in the field of machine learning and software engineering
+                            With over a single year of experience in the field of computer science, I'm passionate about learning more in the field of machine learning and becoming a fullstack developer!
                         </p>
                         <p className="text-muted-foreground">
-                            With over a single year of experience in the field of computer science, I'm passionate about learning more in the field of machine learning and software engineering
+                            I am part of the Infrastructure Team at Cyber @ UCI and a member of the Alumni and Academic Affairs Committee at ICS Student Council. 
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                             <a href="#contact" className="cosmic-button">
