@@ -60,28 +60,6 @@
       opacity: 0;
     }
   }
-  @keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-
-  .animate-gradient-text {
-    background-size: 200% 200%;
-    animation: gradientMove 6s ease infinite;
-  }
-
-  @keyframes pulseSlow {
-    0%, 100% { opacity: 0.4; }
-    50% { opacity: 0.7; }
-  }
-  .animate-pulse-slow { animation: pulseSlow 8s ease-in-out infinite; }
-
-  @keyframes stars {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(-20px); }
-  }
-  .animate-stars { animation: stars 10s linear infinite alternate; }
 }
 
 @layer base {
