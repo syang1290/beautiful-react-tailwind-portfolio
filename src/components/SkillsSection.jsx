@@ -3,12 +3,12 @@ import { cn } from "@/lib/utils";
 
 const skills= [
     {name: "HTML/CSS", level: 55, category: "frontend"},
-    {name: "JavaScript", level: 50, category: "frontend"},
+    {name: "JavaScript", level: 60, category: "frontend"},
     {name: "React", level: 60, category: "frontend"},
     {name: "Next.js", level: 30, category: "frontend"},
     {name: "Tailwind CSS", level: 70, category: "frontend"},
-    {name: "Typescript", level: 40, category: "frontend"},
-    {name: "Node.js", level: 40, category: "backend"},
+    {name: "Typescript", level: 60, category: "frontend"},
+    {name: "Node.js", level: 70, category: "backend"},
     {name: "Git/Github", level: 70, category: "tools"},
     {name: "VS Code", level: 100, category: "tools"},
     {name: "Java", level: 80, category: "backend"},
